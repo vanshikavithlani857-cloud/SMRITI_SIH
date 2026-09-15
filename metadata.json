@@ -1,0 +1,6 @@
+{
+  "name": "Smriti - Eldercare & Memory Companion",
+  "description": "Multilingual voice-assisted eldercare and memory companion featuring real-time anxiety relief, caregiver alerts, family photo memory album, and caregiver dashboard.",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

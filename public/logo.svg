@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Jewel Depth Gradient (Teal-Emerald into Twilight Indigo) -->
+    <linearGradient id="smritiBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="45%" stop-color="#0d9488" />
+      <stop offset="85%" stop-color="#083344" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Specular Bevel Overlay -->
+    <linearGradient id="bevelOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="70%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35" />
+    </linearGradient>
+
+    <!-- Metallic Gold Accent Gradient -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Golden Memory Core / Lotus Petals Gradient -->
+    <linearGradient id="memoryCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="25%" stop-color="#fde047" />
+      <stop offset="65%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <!-- Protective Hands Gradient (Iridescent White to Soft Mint/Silver) -->
+    <linearGradient id="handLeftGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f0fdfa" />
+      <stop offset="100%" stop-color="#99f6e4" />
+    </linearGradient>
+
+    <linearGradient id="handRightGrad" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f0fdfa" />
+      <stop offset="100%" stop-color="#a7f3d0" />
+    </linearGradient>
+
+    <!-- Lotus Petal Center Accent -->
+    <linearGradient id="petalTopGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Outer Drop Shadow -->
+    <filter id="iconShadow" x="-15%" y="-10%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#042f2e" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <!-- 1. Squircle Base with Rich Depth -->
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="url(#smritiBgGrad)" filter="url(#iconShadow)" />
+
+  <!-- 2. Dual Metallic Trim & Glass Edge -->
+  <rect x="25" y="25" width="462" height="462" rx="115" fill="none" stroke="url(#goldBorder)" stroke-width="3" stroke-opacity="0.45" />
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.25" />
+
+  <!-- 3. Specular Light Arc Overlay for Tactile Dimensionality -->
+  <path d="M 24 140 
+           C 24 80, 80 24, 140 24 
+           L 372 24 
+           C 432 24, 488 80, 488 140 
+           C 488 200, 370 280, 240 280 
+           C 110 280, 24 200, 24 140 Z" 
+        fill="url(#bevelOverlay)" 
+        opacity="0.4" />
+
+  <!-- 4. Concentric Harmony Waves (Symbolizing Memory Pulses & Calm) -->
+  <circle cx="256" cy="245" r="185" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.05" />
+  <circle cx="256" cy="245" r="145" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.08" />
+  <circle cx="256" cy="245" r="105" fill="none" stroke="url(#goldBorder)" stroke-width="2" stroke-opacity="0.18" />
+
+  <!-- 5. Radiant Golden Halo Behind Core -->
+  <circle cx="256" cy="225" r="85" fill="#fef08a" opacity="0.32" filter="url(#coreGlow)" />
+  <circle cx="256" cy="220" r="50" fill="#f59e0b" opacity="0.4" filter="url(#coreGlow)" />
+
+  <!-- 6. Memory Lotus / Neural Blossom: Left and Right Petals -->
+  <!-- Left Bloom Leaf -->
+  <path d="M 256 220
+           C 220 160, 160 170, 155 225
+           C 150 270, 210 295, 256 315
+           C 230 280, 200 255, 210 220
+           C 218 190, 245 195, 256 220 Z"
+        fill="url(#memoryCoreGrad)"
+        opacity="0.9" />
+
+  <!-- Right Bloom Leaf -->
+  <path d="M 256 220
+           C 292 160, 352 170, 357 225
+           C 362 270, 302 295, 256 315
+           C 282 280, 312 255, 302 220
+           C 294 190, 267 195, 256 220 Z"
+        fill="url(#memoryCoreGrad)"
+        opacity="0.9" />
+
+  <!-- Center Memory Bud / Lotus Heart (Flame of Awareness) -->
+  <path d="M 256 142
+           C 278 185, 300 230, 286 265
+           C 276 290, 256 308, 256 308
+           C 256 308, 236 290, 226 265
+           C 212 230, 234 185, 256 142 Z"
+        fill="url(#petalTopGrad)"
+        filter="url(#coreGlow)" />
+
+  <!-- Center Highlight Flame -->
+  <path d="M 256 165
+           C 268 195, 278 225, 270 248
+           C 264 265, 256 275, 256 275
+           C 256 275, 248 265, 242 248
+           C 234 225, 244 195, 256 165 Z"
+        fill="#ffffff"
+        opacity="0.75" />
+
+  <!-- 7. Caring Hands of Sahayak (Supporting Base holding Memories) -->
+  <!-- Left Hand & Wrist Silhouette -->
+  <path d="M 115 385
+           C 130 345, 168 315, 208 300
+           C 230 292, 248 302, 252 320
+           C 238 332, 218 335, 192 345
+           C 162 358, 142 380, 132 410
+           C 122 404, 117 395, 115 385 Z"
+        fill="url(#handLeftGrad)"
+        filter="url(#coreGlow)" />
+
+  <!-- Right Hand & Wrist Silhouette -->
+  <path d="M 397 385
+           C 382 345, 344 315, 304 300
+           C 282 292, 264 302, 260 320
+           C 274 332, 294 335, 320 345
+           C 350 358, 370 380, 380 410
+           C 390 404, 395 395, 397 385 Z"
+        fill="url(#handRightGrad)"
+        filter="url(#coreGlow)" />
+
+  <!-- Foundation Lotus Cradle (Embracing Arc) -->
+  <path d="M 188 360
+           C 222 396, 290 396, 324 360
+           C 292 384, 220 384, 188 360 Z"
+        fill="#ffffff"
+        opacity="0.95" />
+
+  <!-- 8. Guiding Star of Smriti (Top Spark of Memory & Clarity) -->
+  <path d="M 256 95 L 260 112 L 277 116 L 260 120 L 256 137 L 252 120 L 235 116 L 252 112 Z"
+        fill="#ffffff" 
+        filter="url(#coreGlow)" />
+  <circle cx="256" cy="116" r="3.5" fill="#fef08a" />
+
+  <!-- Subtle Micro Stars for Constellation of Memories -->
+  <circle cx="185" cy="150" r="2.5" fill="#fde047" opacity="0.75" />
+  <circle cx="327" cy="150" r="2.5" fill="#fde047" opacity="0.75" />
+  <circle cx="140" cy="270" r="2" fill="#5eead4" opacity="0.6" />
+  <circle cx="372" cy="270" r="2" fill="#5eead4" opacity="0.6" />
+</svg>

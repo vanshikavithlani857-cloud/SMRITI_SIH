@@ -1,0 +1,142 @@
+import { CaregiverAlert, Medication, MemoryPhoto, PatientProfile } from '../types';
+
+export const initialPatientProfile: PatientProfile = {
+  id: 'pat-1',
+  name: 'Rameshwar Ji',
+  age: 78,
+  condition: 'Mild Cognitive Care & Senior Wellness',
+  caregiverName: 'Pooja (Daughter)',
+  caregiverPhone: '+91 98765 43210',
+  emergencyContact: '112 / +91 98765 43210',
+  emergencyContactName: 'Dr. Priya Sharma',
+  preferredLanguage: 'hi',
+  voicePromptsEnabled: true,
+  voiceVolume: 0.9,
+};
+
+export const initialPatients: PatientProfile[] = [
+  initialPatientProfile,
+  {
+    id: 'pat-2',
+    name: 'Kamala Baruah (আইতা)',
+    age: 74,
+    condition: 'Memory Support & Hypertension',
+    conditions: ['Mild Memory Loss', 'Hypertension'],
+    caregiverName: 'Bikash Baruah (Son)',
+    caregiverPhone: '+91 94350 12345',
+    emergencyContact: '+91 94350 12345',
+    emergencyContactName: 'Dr. Hemanta Saikia (Guwahati)',
+    preferredLanguage: 'as',
+    voicePromptsEnabled: true,
+    voiceVolume: 0.9,
+    notes: 'Loves traditional Bihu songs and morning Assam CTC tea.',
+  },
+];
+
+export const initialPhotos: MemoryPhoto[] = [
+  {
+    id: 'photo-1',
+    url: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80',
+    title: 'Ananya & Dadaji Laughing',
+    relation: 'Granddaughter Ananya',
+    memoryNote: 'Dadaji, remember when Ananya visited during summer holidays and made you laugh all afternoon?',
+    dateAdded: '2 days ago',
+    addedBy: 'Pooja (Daughter)',
+    featuredInDashboard: true,
+  },
+  {
+    id: 'photo-2',
+    url: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=80',
+    title: 'Family Diwali Celebration',
+    relation: 'Entire Family',
+    memoryNote: 'All of us gathered together in Ahmedabad for Diwali. You blessed everyone with love and sweets.',
+    dateAdded: '1 week ago',
+    addedBy: 'Pooja (Daughter)',
+    featuredInDashboard: true,
+  },
+  {
+    id: 'photo-3',
+    url: 'https://images.unsplash.com/photo-1609137144822-45e0d494ce16?auto=format&fit=crop&w=1000&q=80',
+    title: 'Morning Walk in Lodhi Garden',
+    relation: 'Son Rahul & Dadaji',
+    memoryNote: 'Sunny morning walk under the ancient banyan trees. Rahul made sure you rested on your favorite bench.',
+    dateAdded: '2 weeks ago',
+    addedBy: 'Rahul (Son)',
+    featuredInDashboard: false,
+  },
+  {
+    id: 'photo-4',
+    url: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1000&q=80',
+    title: 'Ganga Aarti Pilgrimage',
+    relation: 'Spiritual Trip with Shanti Ji',
+    memoryNote: 'Peaceful bells and holy lamps at Haridwar. You felt deeply calm and blessed by the divine waters.',
+    dateAdded: '1 month ago',
+    addedBy: 'Pooja (Daughter)',
+    featuredInDashboard: false,
+  },
+];
+
+export const initialMedications: Medication[] = [
+  {
+    id: 'med-1',
+    name: 'BP & Heart Tablet (Telmisartan 40mg)',
+    dosage: '1 tablet',
+    timing: '08:00 AM',
+    timeSlot: 'morning',
+    instructions: 'Take with warm water after light breakfast',
+    takenToday: true,
+    takenAt: '08:15 AM',
+  },
+  {
+    id: 'med-2',
+    name: 'Calcium & Vitamin D3',
+    dosage: '1 chewable tablet',
+    timing: '01:30 PM',
+    timeSlot: 'afternoon',
+    instructions: 'Take after lunch with curd or water',
+    takenToday: false,
+  },
+  {
+    id: 'med-3',
+    name: 'Memory & Neuro Support (Ginkgo/B-Complex)',
+    dosage: '1 capsule',
+    timing: '06:00 PM',
+    timeSlot: 'evening',
+    instructions: 'Take in the evening with warm milk or tea',
+    takenToday: false,
+  },
+  {
+    id: 'med-4',
+    name: 'Night Sugar & Digestion Care',
+    dosage: '1 tablet',
+    timing: '09:00 PM',
+    timeSlot: 'night',
+    instructions: 'Take 30 minutes before bedtime',
+    takenToday: false,
+  },
+];
+
+export const initialAlerts: CaregiverAlert[] = [
+  {
+    id: 'alert-demo-1',
+    timestamp: 'Today, 10:15 AM',
+    type: 'anxiety',
+    priority: 'high',
+    title: 'Moderate Anxiety Session Completed',
+    message: 'Rameshwar Ji initiated a 4-minute guided Pranayama breathing session. Rated anxiety 6/10 initially, reported feeling calmer afterwards.',
+    patientName: 'Rameshwar Ji',
+    status: 'acknowledged',
+    responseNotes: 'Called on intercom; he was listening to flute music and drinking warm water.',
+  },
+  {
+    id: 'alert-demo-2',
+    timestamp: 'Today, 08:30 AM',
+    type: 'medication_missed',
+    priority: 'medium',
+    title: 'Morning Medicine Taken Successfully',
+    message: 'Morning BP tablet confirmed taken at 08:15 AM after breakfast.',
+    patientName: 'Rameshwar Ji',
+    status: 'resolved',
+    resolvedAt: 'Today, 08:35 AM',
+  },
+];
